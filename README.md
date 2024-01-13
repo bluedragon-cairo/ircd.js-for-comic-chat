@@ -1,3 +1,28 @@
+A fork of ircd.js that fixes crashes on Microsoft Comic Chat 2.5, and I added some non-standard stuff for myself.
+
+```js
+const irc = require('./ircd.js');
+
+irc.Server.boot({
+	network: 'ircn',
+	hostname: '127.0.0.1',
+	serverDescription: 'A Node IRC daemon',
+	serverName: 'server1',
+	motd: 'Message of the day',
+	port: 6667,
+	whoWasLimit: 10000,
+	maxNickLength: 999,
+	opers: {
+	},
+});
+```
+
+<span>&nbsp;</span>
+
+<span>&nbsp;</span>
+
+<span>-</span><span>-</span><span>-</span><span>-</span><span>-</span><span>-</span> Original Readme <span>-</span><span>-</span><span>-</span><span>-</span><span>-</span><span>-</span>
+
 <pre>
  ::::::::::..     .,-::::::::::::-.         ....:::::: .::::::. 
  ;;;;;;;``;;;;  ,;;;'````' ;;,   `';,    ;;;;;;;;;````;;;`    ` 
@@ -10,7 +35,7 @@
  ircd.js
 </pre>
 
-h3. About
+### About
 
 I'm implementing "RFC 1459":https://tools.ietf.org/html/rfc1459 / "RFC 2812":https://tools.ietf.org/html/rfc2812 for "Node.js":http://nodejs.org/.
 
@@ -55,13 +80,13 @@ Planned:
 * Local ops (+O)
 * Stats command
 
-h3. Documentation
+### Documentation
 
 Install with <code>npm install ircdjs</code>.
 
 Set up configuration in <code>/etc/ircdjs/config.json</code>.
 
-h3. Contributions
+### Contributions
 
 * overra
 * jazzychad (Chad Etzel)
@@ -73,7 +98,7 @@ h3. Contributions
 * andrew12 (Andrew Herbig)
 * jrasanen (Jussi Räsänen)
 
-h3. License (GPL)
+### License (GPL)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
